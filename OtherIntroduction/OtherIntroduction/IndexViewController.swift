@@ -38,7 +38,7 @@ class IndexViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc:UIViewController = DetailViewController()
+        let vc = DetailViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
