@@ -39,6 +39,7 @@ class IndexViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailViewController()
+        vc.memberName = memberList[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
 

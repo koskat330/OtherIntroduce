@@ -16,8 +16,14 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         memberNameLabel.text = memberName
-
-        // Do any additional setup after loading the view.
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "トップメニュー",
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(tappedBackButton(_:)))
+    }
+    
+    @objc private func tappedBackButton(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
     }
 
 }
